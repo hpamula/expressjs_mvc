@@ -1,0 +1,8 @@
+<%- include('partials/header') %>
+<h2>Złóż ofertę dla: <%= tender.title %></h2>
+<form action="/tenders/<%= tender.id %>/offer" method="post">
+  <input name="name" placeholder="Twoje imię / Instytucja" required />
+  <input type="number" step="0.01" name="amount" placeholder="Kwota oferty" required />
+  <input type="submit details" class="submit" value="Wyślij ofertę" />
+</form>
+<%- include('partials/footer') %>

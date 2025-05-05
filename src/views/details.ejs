@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+<h2><%= tender.title %></h2>
+<div class="details"><h3>Instytucja</h3><%= tender.institution %></div>
+<div class="details"><h3>Opis</h3><%= tender.description %></div>
+<% if (new Date(tender.end_datetime) > new Date()) { %>
+  <a href="/tenders/<%= tender.id %>/offer" class="submit details">Złóż ofertę</a>
+<% } else { %>
+  <h3>Oferty:</h3>
+  <% if (offers.length) { %>
+    <ul>
+      <% offers.forEach(o => { %>
+        <% if (o.amount <= tender.max_budget) { %>
+          <li><%= o.name %>: <%= o.amount %> (złożono: <%= o.submitted_at %>)</li>
+        <% } %>
+      <% }) %>
+    </ul>
+  <% } else { %>
+    <p>Brak ofert lub brak rozstrzygnięcia.</p>
+  <% } %>
+<% } %>
+<%- include('partials/footer') %>

@@ -1,0 +1,30 @@
+{
+  "name": "expressjs_mvc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hpamula/expressjs_mvc.git"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "bugs": {
+    "url": "https://github.com/hpamula/expressjs_mvc/issues"
+  },
+  "homepage": "https://github.com/hpamula/expressjs_mvc#readme",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

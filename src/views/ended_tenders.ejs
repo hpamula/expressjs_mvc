@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+<h2>Lista zakończonych przetargów</h2>
+<table>
+  <tr><th>#</th><th>Tytuł</th><th>Status</th></tr>
+  <% tenders.forEach((t,i) => { %>
+    <tr>
+      <td><%= i+1 %></td>
+      <td><a href="/tenders/<%= t.id %>"><%= t.title %></a></td>
+      <td>Zakończone</td>
+    </tr>
+  <% }) %>
+</table>
+<%- include('partials/footer') %>

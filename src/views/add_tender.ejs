@@ -1,0 +1,12 @@
+<%- include('partials/header') %>
+<h2>Dodaj przetarg</h2>
+<form action="/tenders/add" method="post">
+  <textarea name="title" placeholder="Tytuł" required></textarea>
+  <textarea name="institution" placeholder="Instytucja" required></textarea>
+  <textarea name="description" placeholder="Opis" required></textarea>
+  <input type="datetime-local" name="start" required />
+  <input type="datetime-local" name="end" required />
+  <input type="number" step="0.01" name="budget" placeholder="Max budżet" required />
+  <input type="submit" class="submit" value="Dodaj" />
+</form>
+<%- include('partials/footer') %>

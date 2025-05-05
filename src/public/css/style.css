@@ -1,0 +1,84 @@
+:root {
+  --main-bg: #000;
+  --main-middle: #555;
+  --main-font: #fff;
+  --main-accent: #00aaff;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  border-radius: 16px;
+  font-size: 16px;
+  font-family: Arial;
+  border-color: var(--main-middle);
+  border-width: 1px;
+  background-color: var(--main-bg);
+  color: var(--main-font);
+  outline: none;
+}
+#app-container {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+nav {
+  padding: 10px;
+  margin: 5px;
+  border-style: solid;
+  height: max-content;
+}
+nav a {
+  padding: 10px 0;
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+}
+#main-content {
+  border-style: solid;
+  margin: 5px;
+  padding: 10px;
+  width: 100%;
+}
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+table td, table th {
+  padding: 10px;
+  border-style: solid;
+  border-radius: 0px;
+}
+form {
+  width: 100%;
+}
+form input, form textarea, .details {
+  display: block;
+  width: calc(100% - 30px);
+  margin: 5px;
+  padding: 10px;
+  border-style: solid;
+}
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+.submit {
+  width: 100px;
+  margin: 0 auto;
+  display: block;
+  border-color: var(--main-accent);
+  cursor: pointer;
+  border-style: solid;
+  text-decoration: none;
+}
+.clickable {
+  color: var(--main-accent);
+  text-decoration: none;
+}

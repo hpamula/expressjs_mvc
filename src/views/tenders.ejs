@@ -1,0 +1,14 @@
+<%- include('partials/header') %>
+<h2>Lista przetargów</h2>
+<table>
+  <tr><th>#</th><th>Tytuł</th><th>Start</th><th>Koniec</th></tr>
+  <% tenders.forEach((t,i) => { %>
+    <tr>
+      <td><%= i+1 %></td>
+      <td><a href="/tenders/<%= t.id %>" class="clickable"><%= t.title %></a></td>
+      <td><%= t.start_datetime %></td>
+      <td><%= t.end_datetime %></td>
+    </tr>
+  <% }) %>
+</table>
+<%- include('partials/footer') %>
