@@ -4,6 +4,8 @@ npm init -y
 npm install express ejs sqlite3 body-parser
 npm install --save-dev nodemon
 
+mkdir data
+
 # mkdir -p src/config \
 #   src/models \
 #   src/services \
