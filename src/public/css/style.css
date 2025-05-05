@@ -3,6 +3,8 @@
   --main-middle: #555;
   --main-font: #fff;
   --main-accent: #00aaff;
+  --main-accent-dim: #00aaffb7;
+  --main-accent-dimmer: #00aaff54;
 }
 * {
   padding: 0px;
@@ -15,6 +17,9 @@
   background-color: var(--main-bg);
   color: var(--main-font);
   outline: none;
+}
+p {
+  font-size: 18px;
 }
 #app-container {
   display: flex;
@@ -32,6 +37,7 @@ nav a {
   font-size: 18px;
   text-decoration: none;
   display: block;
+  color: var(--main-accent-dim);
 }
 #main-content {
   border-style: solid;
@@ -66,6 +72,9 @@ form input, form textarea, .details {
   margin: 5px;
   padding: 10px;
   border-style: solid;
+}
+form input, form textarea {
+  border-color: var(--main-accent-dimmer);
 }
 input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   filter: invert(1);
