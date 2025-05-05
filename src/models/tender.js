@@ -1,7 +1,7 @@
 const db = require('../config/db');
 module.exports = {
-  getActive: cb => db.all("SELECT * FROM tenders WHERE end_datetime > datetime('now')", cb),
-  getEnded: cb => db.all("SELECT * FROM tenders WHERE end_datetime <= datetime('now')", cb),
+  getActive: cb => db.all("SELECT * FROM tenders WHERE end_datetime > datetime('now', 'localtime')", cb),
+  getEnded: cb => db.all("SELECT * FROM tenders WHERE end_datetime <= datetime('now', 'localtime')", cb),
   getById: (id, cb) => db.get("SELECT * FROM tenders WHERE id = ?", id, cb),
   add: (data, cb) => db.run(
     `INSERT INTO tenders(title,institution,description,start_datetime,end_datetime,max_budget)
