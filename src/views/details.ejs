@@ -5,17 +5,25 @@
 <% if (new Date(tender.end_datetime) > new Date()) { %>
   <a href="/tenders/<%= tender.id %>/offer" class="submit details">Złóż ofertę</a>
 <% } else { %>
-  <h3>Oferty:</h3>
-  <% if (offers.length) { %>
-    <ul>
-      <% offers.forEach(o => { %>
-        <% if (o.amount <= tender.max_budget) { %>
-          <li><%= o.name %>: <%= o.amount %> (złożono: <%= o.submitted_at %>)</li>
-        <% } %>
-      <% }) %>
-    </ul>
-  <% } else { %>
-    <p>Brak ofert lub brak rozstrzygnięcia.</p>
-  <% } %>
+  <div class="details">
+    <h3>Oferty</h3>
+    <% if (offers.length) { %>
+      <table>
+        <tr><th>#</th><th>Nazwa składającego</th><th>Wartość</th><th>Data złożenia</th></tr>
+        <% offers.forEach((t,i) => { %>
+          <% if (t.amount <= tender.max_budget) { %>
+            <tr>
+              <td><%= i+1 %></td>
+              <td><%= t.name %></a></td>
+              <td><%= t.amount %></td>
+              <td><%= t.submitted_at %></td>
+            </tr>
+          <% } %>
+        <% }) %>
+      </table>
+    <% } else { %>
+      <p>Brak ofert lub brak rozstrzygnięcia.</p>
+    <% } %>
+  </div>
 <% } %>
 <%- include('partials/footer') %>

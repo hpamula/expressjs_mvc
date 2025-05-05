@@ -41,7 +41,8 @@ nav a {
 }
 h2 {
   font-size: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  margin-left: 15px;
 }
 h3 {
   font-size: 16px;
@@ -70,7 +71,7 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   filter: invert(1);
 }
 .submit {
-  width: 100px;
+  width: 150px;
   margin: 0 auto;
   display: block;
   border-color: var(--main-accent);

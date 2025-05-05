@@ -5,7 +5,7 @@
   <% tenders.forEach((t,i) => { %>
     <tr>
       <td><%= i+1 %></td>
-      <td><a href="/tenders/<%= t.id %>"><%= t.title %></a></td>
+      <td><a href="/tenders/<%= t.id %>" class="clickable"><%= t.title %></a></td>
       <td>Zakończone</td>
     </tr>
   <% }) %>
